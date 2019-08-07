@@ -13,5 +13,5 @@ from django.http import JsonResponse
 
 def hello_api(request):
     return JsonResponse({
-        'title' : 'Hello API!'},
+        'title' : ['Hello API!', 'Jesus Christ!', 'Bullshit!', 'My name~', '집에가요~']},
         json_dumps_params = {'ensure_ascii': True})
