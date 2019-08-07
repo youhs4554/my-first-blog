@@ -12,6 +12,11 @@ def post_list(request):
 from django.http import JsonResponse
 
 def hello_api(request):
-    return JsonResponse({
-        'title' : ['Hello API!', 'Jesus Christ!', 'Bullshit!', 'My name~', '집에가요~']},
-        json_dumps_params = {'ensure_ascii': True})
+    return JsonResponse(
+    [
+        {'title': 'Hello API'},
+        {'title': 'Jesus Christ!'},
+        {'title': 'Bullshit!'},
+        {'title': 'My name~'},
+        {'title': '집에가요~'},
+    ], json_dumps_params = {'ensure_ascii': True}, safe=False)
